@@ -68,7 +68,8 @@ class Client:
         if job["kind"] == "concepts":
             ids = {x["concept_id"] for x in job["results"]}
             return _Resp(200, [c for c in self.req("get", f"/campaigns/{cid}/concepts").json() if c["id"] in ids])
-        return _Resp(200, job["results"])
+        ids = {x["brief_id"] for x in job["results"]}
+        return _Resp(200, [b for b in self.req("get", f"/campaigns/{cid}/briefs").json() if b["id"] in ids])
 
 
 class _Resp:

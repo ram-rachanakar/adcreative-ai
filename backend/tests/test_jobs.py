@@ -145,7 +145,7 @@ def test_idempotency_key_returns_same_job(make_client, env):
     r1 = c.req("post", f"/campaigns/{cid}/creatives/generate", json={"sizes": [{"width": 1080, "height": 1080}]}, headers=h)
     r2 = c.req("post", f"/campaigns/{cid}/creatives/generate", json={"sizes": [{"width": 1080, "height": 1080}]}, headers=h)
     assert r1.status_code == 202 and r2.status_code == 200 and r1.json()["id"] == r2.json()["id"]
-    assert img.calls == 1 and len(c.req("get", f"/campaigns/{cid}/jobs").json()) == 1
+    assert img.calls == 1 and len([j for j in c.req("get", f"/campaigns/{cid}/jobs").json() if j["kind"] == "banners"]) == 1
 
 
 def test_worker_crash_retries_then_dead_letters(make_client, env, monkeypatch):
@@ -236,6 +236,6 @@ def test_rls_covers_job_tables(make_client, env):
     with SessionLocal() as db:
         for t in ("generation_jobs",):
             set_org(db, uuid.UUID(b.org))
-            assert db.execute(text(f"select count(*) from {t}")).scalar() == 0
+            assert db.execute(text(f"select count(*) from {t} where organization_id <> :o"), {"o": b.org}).scalar() == 0  # b sees only its own rows
             set_org(db, uuid.UUID(a.org))
             assert db.execute(text(f"select count(*) from {t}")).scalar() > 0
