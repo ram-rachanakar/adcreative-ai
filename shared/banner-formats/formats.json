@@ -1,0 +1,534 @@
+{
+ "registry_version": 1,
+ "note": "Sizes follow commonly published platform guidance. NOT verified against live platform documentation: validated_on is null until someone checks. Requirements change; confirm before launching.",
+ "formats": [
+  {
+   "id": "google_display_medium_rectangle_300x250",
+   "platform": "google_display",
+   "placement": "medium_rectangle",
+   "name": "Medium Rectangle",
+   "width": 300,
+   "height": 250,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_large_rectangle_336x280",
+   "platform": "google_display",
+   "placement": "large_rectangle",
+   "name": "Large Rectangle",
+   "width": 336,
+   "height": 280,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_leaderboard_728x90",
+   "platform": "google_display",
+   "placement": "leaderboard",
+   "name": "Leaderboard",
+   "width": 728,
+   "height": 90,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_half_page_300x600",
+   "platform": "google_display",
+   "placement": "half_page",
+   "name": "Half Page",
+   "width": 300,
+   "height": 600,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_wide_skyscraper_160x600",
+   "platform": "google_display",
+   "placement": "wide_skyscraper",
+   "name": "Wide Skyscraper",
+   "width": 160,
+   "height": 600,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_skyscraper_120x600",
+   "platform": "google_display",
+   "placement": "skyscraper",
+   "name": "Skyscraper",
+   "width": 120,
+   "height": 600,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_billboard_970x250",
+   "platform": "google_display",
+   "placement": "billboard",
+   "name": "Billboard",
+   "width": 970,
+   "height": 250,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_large_leaderboard_970x90",
+   "platform": "google_display",
+   "placement": "large_leaderboard",
+   "name": "Large Leaderboard",
+   "width": 970,
+   "height": 90,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_mobile_banner_320x50",
+   "platform": "google_display",
+   "placement": "mobile_banner",
+   "name": "Mobile Banner",
+   "width": 320,
+   "height": 50,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_large_mobile_banner_320x100",
+   "platform": "google_display",
+   "placement": "large_mobile_banner",
+   "name": "Large Mobile Banner",
+   "width": 320,
+   "height": 100,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_square_250x250",
+   "platform": "google_display",
+   "placement": "square",
+   "name": "Square",
+   "width": 250,
+   "height": 250,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "google_display_small_square_200x200",
+   "platform": "google_display",
+   "placement": "small_square",
+   "name": "Small Square",
+   "width": 200,
+   "height": 200,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": 150,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "instagram_feed_portrait_1080x1350",
+   "platform": "instagram",
+   "placement": "feed_portrait",
+   "name": "Feed Portrait",
+   "width": 1080,
+   "height": 1350,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "instagram_feed_square_1080x1080",
+   "platform": "instagram",
+   "placement": "feed_square",
+   "name": "Feed Square",
+   "width": 1080,
+   "height": 1080,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "instagram_feed_landscape_1080x566",
+   "platform": "instagram",
+   "placement": "feed_landscape",
+   "name": "Feed Landscape",
+   "width": 1080,
+   "height": 566,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "instagram_story_1080x1920",
+   "platform": "instagram",
+   "placement": "story",
+   "name": "Story",
+   "width": 1080,
+   "height": 1920,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": {
+    "top_pct": 14,
+    "bottom_pct": 20
+   },
+   "eligibility_notes": "Story/Reels placement: keep text and logo out of the top and bottom UI overlay zones.",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "facebook_feed_square_1080x1080",
+   "platform": "facebook",
+   "placement": "feed_square",
+   "name": "Feed Square",
+   "width": 1080,
+   "height": 1080,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "facebook_link_landscape_1200x630",
+   "platform": "facebook",
+   "placement": "link_landscape",
+   "name": "Link Landscape",
+   "width": 1200,
+   "height": 630,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "facebook_story_1080x1920",
+   "platform": "facebook",
+   "placement": "story",
+   "name": "Story",
+   "width": 1080,
+   "height": 1920,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": {
+    "top_pct": 14,
+    "bottom_pct": 20
+   },
+   "eligibility_notes": "Story placement: keep text and logo out of the top and bottom UI overlay zones.",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "facebook_feed_square_hires_1200x1200",
+   "platform": "facebook",
+   "placement": "feed_square_hires",
+   "name": "Feed Square Hires",
+   "width": 1200,
+   "height": 1200,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "linkedin_single_image_landscape_1200x627",
+   "platform": "linkedin",
+   "placement": "single_image_landscape",
+   "name": "Single Image Landscape",
+   "width": 1200,
+   "height": 627,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "linkedin_single_image_square_1200x1200",
+   "platform": "linkedin",
+   "placement": "single_image_square",
+   "name": "Single Image Square",
+   "width": 1200,
+   "height": 1200,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "linkedin_single_image_vertical_720x900",
+   "platform": "linkedin",
+   "placement": "single_image_vertical",
+   "name": "Single Image Vertical",
+   "width": 720,
+   "height": 900,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "x_image_16x9_1600x900",
+   "platform": "x",
+   "placement": "image_16x9",
+   "name": "Image 16X9",
+   "width": 1600,
+   "height": 900,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "x_image_square_1080x1080",
+   "platform": "x",
+   "placement": "image_square",
+   "name": "Image Square",
+   "width": 1080,
+   "height": 1080,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "pinterest_standard_pin_1000x1500",
+   "platform": "pinterest",
+   "placement": "standard_pin",
+   "name": "Standard Pin",
+   "width": 1000,
+   "height": 1500,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "pinterest_square_pin_1000x1000",
+   "platform": "pinterest",
+   "placement": "square_pin",
+   "name": "Square Pin",
+   "width": 1000,
+   "height": 1000,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "youtube_companion_banner_300x250",
+   "platform": "youtube",
+   "placement": "companion_banner",
+   "name": "Companion Banner",
+   "width": 300,
+   "height": 250,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "Companion banner shown beside video ads; requires a video campaign. A static image alone does not make an eligible YouTube ad.",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  },
+  {
+   "id": "youtube_video_thumbnail_1280x720",
+   "platform": "youtube",
+   "placement": "video_thumbnail",
+   "name": "Video Thumbnail",
+   "width": 1280,
+   "height": 720,
+   "file_types": [
+    "png",
+    "jpeg"
+   ],
+   "max_file_kb": null,
+   "safe_zone": null,
+   "eligibility_notes": "Video thumbnail size, NOT a static ad placement. Included for thumbnail use only.",
+   "verification": "unverified",
+   "validated_on": null,
+   "format_version": 1
+  }
+ ]
+}

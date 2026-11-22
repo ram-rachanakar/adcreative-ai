@@ -1,0 +1,45 @@
+name: adcreative
+x-backend: &backend
+  build: { context: ./backend }
+  env_file: .env
+  environment:
+    DATABASE_URL: postgresql+psycopg://adcreative_app:adcreative_app@postgres:5432/adcreative
+    MIGRATION_DATABASE_URL: postgresql+psycopg://adcreative:adcreative@postgres:5432/adcreative
+    REDIS_URL: redis://redis:6379/0
+    S3_ENDPOINT: http://minio:9000
+  depends_on:
+    postgres: { condition: service_healthy }
+    redis: { condition: service_healthy }
+    minio: { condition: service_healthy }
+  volumes: ["./backend:/app"]
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment: { POSTGRES_USER: adcreative, POSTGRES_PASSWORD: adcreative, POSTGRES_DB: adcreative }
+    ports: ["127.0.0.1:5433:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U adcreative"], interval: 5s, retries: 10 }
+  redis:
+    image: redis:7-alpine
+    ports: ["127.0.0.1:6380:6379"]
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, retries: 10 }
+  minio:
+    image: quay.io/minio/minio
+    command: server /data --console-address ":9001"
+    ports: ["127.0.0.1:9000:9000", "127.0.0.1:9001:9001"]
+    volumes: [miniodata:/data]
+    healthcheck: { test: ["CMD", "mc", "ready", "local"], interval: 5s, retries: 10 }
+  backend:
+    <<: *backend
+    command: sh -c "alembic upgrade head && python -m app.seed && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+    ports: ["8000:8000"]
+  worker:
+    <<: *backend
+    command: celery -A app.workers.celery_app worker -l info
+  frontend:
+    build: { context: ./frontend }
+    environment: { NEXT_PUBLIC_API_URL: http://localhost:8000 }
+    ports: ["3000:3000"]
+    volumes: ["./frontend:/app", "/app/node_modules", "/app/.next"]
+    depends_on: [backend]
+volumes: { pgdata: {}, miniodata: {} }

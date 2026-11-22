@@ -1,0 +1,123 @@
+[
+ {
+  "args": {
+   "text": "Hydrate all day with AeroBottle",
+   "family": "Liberation Sans",
+   "weight": 700,
+   "size": 40,
+   "min_size": 14,
+   "max_lines": 3,
+   "line_height": 1.15,
+   "box_w": 300,
+   "box_h": 120,
+   "spacing": 0,
+   "uppercase": false
+  },
+  "expect": {
+   "lines": [
+    "Hydrate all day",
+    "with AeroBottle"
+   ],
+   "font_size": 40.0,
+   "overflow": false,
+   "shrunk": false
+  }
+ },
+ {
+  "args": {
+   "text": "Shop now",
+   "family": "Liberation Sans",
+   "weight": 700,
+   "size": 20,
+   "min_size": 9,
+   "max_lines": 1,
+   "line_height": 1.0,
+   "box_w": 60,
+   "box_h": 30,
+   "spacing": 0,
+   "uppercase": true
+  },
+  "expect": {
+   "lines": [
+    "SHOP NOW"
+   ],
+   "font_size": 14.599999999999993,
+   "overflow": false,
+   "shrunk": true
+  }
+ },
+ {
+  "args": {
+   "text": "Supercalifragilisticexpialidocious",
+   "family": "Liberation Serif",
+   "weight": 400,
+   "size": 30,
+   "min_size": 10,
+   "max_lines": 2,
+   "line_height": 1.2,
+   "box_w": 100,
+   "box_h": 80,
+   "spacing": 1,
+   "uppercase": false
+  },
+  "expect": {
+   "lines": [
+    "Supercalifragilisticexpialidocious"
+   ],
+   "font_size": 10.0,
+   "overflow": true,
+   "shrunk": true
+  }
+ },
+ {
+  "args": {
+   "text": "A very long headline that will never fit into this small box at all",
+   "family": "DejaVu Sans",
+   "weight": 400,
+   "size": 24,
+   "min_size": 12,
+   "max_lines": 2,
+   "line_height": 1.1,
+   "box_w": 120,
+   "box_h": 50,
+   "spacing": 0,
+   "uppercase": false
+  },
+  "expect": {
+   "lines": [
+    "A very long headline",
+    "that will never fit",
+    "into this small box",
+    "at all"
+   ],
+   "font_size": 12.0,
+   "overflow": true,
+   "shrunk": true
+  }
+ },
+ {
+  "args": {
+   "text": "  spaced   out   words  ",
+   "family": "Liberation Sans",
+   "weight": 400,
+   "size": 18,
+   "min_size": 8,
+   "max_lines": 3,
+   "line_height": 1.3,
+   "box_w": 90,
+   "box_h": 200,
+   "spacing": 2,
+   "uppercase": false
+  },
+  "expect": {
+   "lines": [
+    "spaced",
+    "out",
+    "words"
+   ],
+   "font_size": 18.0,
+   "overflow": false,
+   "shrunk": false
+  }
+ }
+]

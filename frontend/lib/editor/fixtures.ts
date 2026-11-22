@@ -1,0 +1,10 @@
+import type { Doc, DocView, Layer } from "./types";
+export const text = (o: Partial<Layer> = {}): Layer => ({ type: "text", id: "head", role: "headline", name: "Headline", x: 10, y: 10, w: 200, h: 60, opacity: 1, locked: false, visible: true, rotation: 0, text: "Hello world", font_family: "Liberation Sans", font_weight: 700, font_size: 28, min_font_size: 12, max_lines: 3, auto_fit: true, line_height: 1.15, color: "#111111", align: "left", valign: "top", letter_spacing: 0, uppercase: false, ...o } as Layer);
+export const image = (o: Partial<Layer> = {}): Layer => ({ type: "image", id: "prod", role: "product", name: "Product", x: 150, y: 80, w: 120, h: 140, opacity: 1, locked: false, visible: true, rotation: 0, asset_id: "a-prod", fit: "contain", shadow: "none", corner_radius: 0, crop: null, ...o } as Layer);
+export const button = (o: Partial<Layer> = {}): Layer => ({ type: "button", id: "cta", role: "cta", name: "CTA", x: 10, y: 200, w: 100, h: 36, opacity: 1, locked: false, visible: true, rotation: 0, label: "Shop now", fill: "#ff5a1f", text_color: "#ffffff", font_family: "Liberation Sans", font_weight: 700, font_size: 16, min_font_size: 9, radius: 8, uppercase: false, padding_x: null, ...o } as Layer);
+export const makeDoc = (w = 300, h = 250): Doc => ({ canvas: { width: w, height: h }, background: { type: "solid", color: "#ffffff", gradient_to: null, angle: 180, asset_id: null, scrims: [], fit: "cover", locked: false }, elements: [image(), text(), button()], meta: {} });
+export const makeView = (id = "doc1", rev = 0, doc: Doc = makeDoc()): DocView => ({
+  id, creative_id: "c-" + id, campaign_id: "camp", format_id: `${doc.canvas.width}x${doc.canvas.height}`, name: "Test", schema_version: 2, revision: rev, rendered_revision: rev, status: "draft",
+  canvas: doc.canvas, background: { ...doc.background, layer_id: "background" }, layers: doc.elements.map((e, i) => ({ ...e, z_index: i + 1 })), metadata: doc.meta, assets: { "a-prod": { id: "a-prod", url: "x", width: 100, height: 100 } },
+  artboard: { width: doc.canvas.width, height: doc.canvas.height, format_id: "x", safe_zone: null }, fonts: [], updated_at: null,
+});

@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+node_modules/
+.next/
+*.pyc
+storage_data/
+
+frontend/test-results/
+frontend/playwright-report/
+frontend/e2e/.seed.json
+frontend/tsconfig.tsbuildinfo
